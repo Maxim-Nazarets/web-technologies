@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 3 — Анкета</title>
+  <style>
+    body { display: flex; justify-content: center; align-items: center; flex-direction: column; }
+    form { max-width: 500px; }
+    fieldset { margin: 10px 0; }
+    label { display: block; margin: 5px 0; }
+  </style>
+</head>
+<body>
+<h1>Анкета користувача</h1>
+<form action="questionnaire.html" method="get" enctype="multipart/form-data">
+  <fieldset>
+    <legend>Особисті дані</legend>
+    <label>Ім’я: <input type="text" name="name" required placeholder="Введіть ім’я"></label>
+    <label>Email: <input type="email" name="email" required autocomplete="off" pattern="^[\w\.-]+@[\w\.-]+\.\w+$"></label>
+    <label>Телефон: <input type="tel" name="tel" pattern="^\+380\d{9}$" placeholder="+380XXXXXXXXX"></label>
+    <label>Пароль: <input type="password" name="pass" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6}"></label>
+    <label>Дата народження: <input type="date" name="birth"></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Вибір</legend>
+    <label><input type="radio" name="gender" value="male" checked> Чоловіча</label>
+    <label><input type="radio" name="gender" value="female"> Жіноча</label>
+    <label><input type="radio" name="gender" value="other"> Інше</label>
+
+    <label><input type="checkbox" name="hobby" value="sport"> Спорт</label>
+    <label><input type="checkbox" name="hobby" value="music"> Музика</label>
+    <label><input type="checkbox" name="hobby" value="reading"> Читання</label>
+    <label><input type="checkbox" name="hobby" value="games"> Ігри</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Файли та інше</legend>
+    <label>Завантажити аудіо: <input type="file" name="audio" accept="audio/*" multiple></label>
+  </fieldset>
+
+  <button type="submit">Надіслати</button>
+  <button type="reset">Очистити</button>
+</form>
+
+<a href="../index.html">Повернутись на головну</a>
+</body>
+</html>
