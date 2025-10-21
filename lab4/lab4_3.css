@@ -1,0 +1,31 @@
+a {
+    color: purple;
+    text-decoration: none;
+}
+
+.main > a {
+    color: green;
+}
+
+.square {
+    list-style-type: square;
+}
+
+.image {
+    list-style-image: url('marker.png'); /* маркер для овочів */
+}
+
+/* Прибрати маркери лише у вкладених списках */
+ul ul ul {
+    list-style-type: none;
+}
+
+/* Посилання в останньому списку без підкреслення */
+.square a {
+    text-decoration: none;
+}
+
+/* Внутрішнє розташування маркерів у списку "Різне" */
+ol {
+    list-style-position: inside;
+}

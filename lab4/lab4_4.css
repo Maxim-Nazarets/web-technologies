@@ -1,0 +1,59 @@
+/* 1. span у p.text-background */
+p.text-background span {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 2. span у div .text-background */
+div.text-background span {
+    background-color: yellow;
+}
+
+/* 3. вкладений span */
+span span {
+    background-color: gray;
+    text-decoration: line-through;
+}
+
+/* 4. span у span у ol */
+ol span span {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* 5. section > p (перший рівень) */
+section > p {
+    text-shadow: 3px 3px 5px blue;
+    text-indent: 50px;
+}
+
+/* 6. ul, що безпосередньо в li */
+li > ul {
+    list-style-image: url('icon.png');
+}
+
+/* 7. p.text-background у div */
+div > .text-background {
+    word-spacing: 50px;
+}
+
+/* 8. p у div.text-bold */
+.text-bold > p {
+    font-weight: bold;
+}
+
+/* 9. p у section, який у div.text-bold */
+.text-bold > section > p {
+    line-height: 45px;
+}
+
+/* 10. абзац одразу після зображення */
+img + p {
+    background-color: brown;
+}
+
+/* 11. абзац після section */
+section ~ p {
+    color: red;
+}
