@@ -1,11 +1,10 @@
-/* Загальні стилі */
+
 * {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     font-size: 20px;
     line-height: 40px;
 }
 
-/* Вирівнювання */
 p {
     color: green;
     text-align: center;
@@ -15,25 +14,19 @@ div {
     text-align: justify;
 }
 
-/* Класи */
-.red {
+
+.redtext {
     color: red;
 }
-
 .nowrap {
     white-space: nowrap;
 }
 
-#bolditalic {
-    font-style: italic;
-    font-weight: bold;
+.shadowtext {
+    text-shadow: 5px -5px 3px blue;
 }
 
-.shadow {
-    text-shadow: 5px -5px 3px gray;
-}
-
-.decor {
+.uppercase {
     text-decoration: line-through;
     text-transform: uppercase;
     text-indent: 50px;
@@ -42,4 +35,9 @@ div {
 .spaced {
     letter-spacing: 30px;
     word-spacing: 50px;
+}
+
+#special {
+    font-style: italic;
+    font-weight: bold;
 }

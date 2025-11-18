@@ -1,31 +1,85 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+
 a {
-    color: purple;
-    text-decoration: none;
+  color: purple;
+  text-decoration: none;
 }
 
 .main > a {
-    color: green;
+  color: green;
+  font-weight: bold;
 }
 
-.square {
-    list-style-type: square;
+.main:nth-child(1) > a,
+.main:nth-child(2) > a,
+.main:nth-child(3) > a {
+  text-decoration: underline;
 }
 
-.image {
-    list-style-image: url('marker.png'); /* маркер для овочів */
+.list-fruits {
+  list-style-type: none;
+  padding-left: 20px;
 }
 
-/* Прибрати маркери лише у вкладених списках */
-ul ul ul {
-    list-style-type: none;
+.list-fruits a {
+  text-decoration: underline;
 }
 
-/* Посилання в останньому списку без підкреслення */
-.square a {
-    text-decoration: none;
+.list-vegs {
+  list-style: none;
+  padding-left: 0;
 }
 
-/* Внутрішнє розташування маркерів у списку "Різне" */
-ol {
-    list-style-position: inside;
+.list-vegs li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 5px;
+}
+
+.list-vegs li::before {
+  content: "✔";
+  color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.list-vegs a {
+  text-decoration: underline;
+}
+
+.list-berries {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.list-berries a {
+  text-decoration: none;
+}
+
+.list-other {
+  list-style-position: inside;
+  margin-top: 10px;
+}
+
+.list-other li {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+.link-underline a {
+  text-decoration: underline;
 }

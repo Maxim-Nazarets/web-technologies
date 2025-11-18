@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f6fb;
+    text-align: center;
+    margin: 40px;
+}
+
+h2 {
+    color: #5a0f0f;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    font-size: 18px;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #d8b0b0;
+}
+
+/* Заголовки таблиці */
+th {
+    background-color: #7a1e1e;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Від світлішого до темнішого */
+tr:nth-child(2) {
+    background-color: #f2d6d6;
+}
+
+tr:nth-child(3) {
+    background-color: #e8bcbc;
+}
+
+tr:nth-child(4) {
+    background-color: #d89292;
+}
+
+tr:nth-child(5) {
+    background-color: #c66d6d;
+    color: #fff;
+}
+
+tr:nth-child(6) {
+    background-color: #a44545;
+    color: #fff;
+}
+
+/* Hover ефект */
+tr:hover {
+    background-color: #6b1616;
+    color: #fff;
+    cursor: default;
+}

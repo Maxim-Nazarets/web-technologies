@@ -1,0 +1,117 @@
+.icons {
+  background-color: rgb(255, 165, 0);
+  width: 500px;
+  padding: 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.level1 {
+  background-color: rgb(103, 158, 128);
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.level1 > li {
+  position: relative;
+  padding-left: 60px;
+}
+
+.level2 {
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.level2 > li {
+  background-color: rgb(153, 180, 102);
+  margin-bottom: 10px;
+  padding: 10px 0 10px 50px;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-size: 24px;
+}
+
+span {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+}
+
+.level1 > li > span {
+  font-size: 20px;
+  font-weight: 700;
+  background-color: rgb(199, 124, 106);
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.level2 span {
+  background-color: rgb(218, 106, 32);
+  border-radius: 4px;
+}
+
+.divider {
+  height: 25px;
+  background-color: rgb(255, 165, 0);
+  margin: 0;
+}
+
+
+.prep::before,
+.rest::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 5px;
+  width: 24px;
+  height: 24px;
+  background-image: url("img/rule.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.route {
+  background-image: url("img/route.svg");
+}
+
+.plane {
+  background-image: url("img/plane.svg");
+}
+
+.hotel {
+  background-image: url("img/hotel.svg");
+}
+
+.car {
+  background-image: url("img/car.svg");
+}
+
+.bar {
+  background-image: url("img/bar.svg");
+}
+
+.casino {
+  background-image: url("img/casino.svg");
+}
+
+.museum {
+  background-image: url("img/museum.svg");
+}
+
+.festival {
+  background-image: url("img/festival.svg");
+}
