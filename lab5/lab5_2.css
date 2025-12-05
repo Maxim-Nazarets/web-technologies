@@ -1,61 +1,82 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f6fb;
-    text-align: center;
-    margin: 40px;
+  font-family: Arial, sans-serif;
+  background-color: #f3f6fb;
+  text-align: center;
+  margin: 40px;
 }
 
 h2 {
-    color: #5a0f0f;
-    margin-bottom: 20px;
+  color: #5a0f0f;
+  margin-bottom: 20px;
 }
 
-table {
-    width: 90%;
-    margin: 0 auto;
-    border-collapse: collapse;
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
-    font-size: 18px;
+/* Основна таблиця */
+table.pricing-table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  font-size: 18px;
 }
 
-th, td {
-    padding: 15px;
-    border: 1px solid #d8b0b0;
+/* Всі клітинки */
+table.pricing-table th,
+table.pricing-table td {
+  padding: 15px;
+  border: 1px solid #d8b0b0;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Заголовки таблиці */
-th {
-    background-color: #7a1e1e;
-    color: #fff;
-    text-transform: uppercase;
+table.pricing-table th {
+  background-color: #7a1e1e;
+  color: #fff;
+  text-transform: uppercase;
 }
 
-/* Від світлішого до темнішого */
-tr:nth-child(2) {
-    background-color: #f2d6d6;
+/* Фонові кольори для рядів функцій */
+table.pricing-table tbody tr:nth-child(1) td { background-color: #f2d6d6; }
+table.pricing-table tbody tr:nth-child(2) td { background-color: #e8bcbc; }
+table.pricing-table tbody tr:nth-child(3) td { background-color: #d89292; }
+table.pricing-table tbody tr:nth-child(4) td { background-color: #c66d6d; color: #fff; }
+table.pricing-table tbody tr:nth-child(5) td { background-color: #a44545; color: #fff; }
+
+/* Hover ефект для рядка функції */
+table.pricing-table tbody tr:hover td {
+  background-color: #6b1616;
+  color: #fff;
+  cursor: default;
 }
 
-tr:nth-child(3) {
-    background-color: #e8bcbc;
+/* Hover ефект для заголовка плану */
+table.pricing-table th.plan:hover {
+  background-color: #a02c2c;
+  color: #fff;
+  cursor: pointer;
 }
 
-tr:nth-child(4) {
-    background-color: #d89292;
+/* Hover ефект для назви функції */
+table.pricing-table td.feature:hover {
+  background-color: #a02c2c;
+  color: #fff;
+  cursor: pointer;
 }
 
-tr:nth-child(5) {
-    background-color: #c66d6d;
-    color: #fff;
+/* Підсвічування активних планів (+) */
+table.pricing-table td {
+  font-weight: normal;
+  color: #333;
 }
 
-tr:nth-child(6) {
-    background-color: #a44545;
-    color: #fff;
+table.pricing-table td:has(> .plus),
+table.pricing-table td:contains("+") {
+  font-weight: bold;
+  color: #1a3d7c;
 }
 
-/* Hover ефект */
-tr:hover {
-    background-color: #6b1616;
-    color: #fff;
-    cursor: default;
+/* Плавна анімація */
+table.pricing-table td,
+table.pricing-table th {
+  transition: all 0.3s ease;
 }

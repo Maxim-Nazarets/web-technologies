@@ -43,25 +43,35 @@ main::after {
 }
 
 /* ==========================================================
-   ЗАВДАННЯ 1 (ОКРЕМО)
+   ЗАВДАННЯ 1 (БАГАТОКОЛОНЧНИЙ ТЕКСТ)
    ========================================================== */
 
-.task1 .multicol {
+.task-multicolumn .multicol {
     column-count: 3;
     column-gap: 35px;
     column-rule: 5px dotted red;
     text-align: justify;
 }
 
-.task1 .float-left,
-.task1 .float-right {
+/* Зображення */
+.task-multicolumn .image-left,
+.task-multicolumn .image-right {
     width: 200px;
     border: 2px solid #ccc;
     border-radius: 10px;
 }
 
-.task1 .float-left { float: left; margin: 10px 20px 10px 0; }
-.task1 .float-right { float: right; margin: 10px 0 10px 20px; }
+/* Ліве обтікання */
+.task-multicolumn .image-left {
+    float: left;
+    margin: 10px 20px 10px 0;
+}
+
+/* Праве обтікання */
+.task-multicolumn .image-right {
+    float: right;
+    margin: 10px 0 10px 20px;
+}
 
 /* ==========================================================
    ЗАВДАННЯ 2 (ОКРЕМО)

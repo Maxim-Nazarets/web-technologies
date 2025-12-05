@@ -1,4 +1,4 @@
-.icons {
+.travel-plan {
   background-color: rgb(255, 165, 0);
   width: 500px;
   padding: 20px;
@@ -18,24 +18,26 @@ ul {
   padding: 0;
 }
 
-.level1 {
+/* Основні етапи подорожі */
+.phase-list {
   background-color: rgb(103, 158, 128);
   padding: 20px;
   border-radius: 6px;
 }
 
-.level1 > li {
+.phase-list > li {
   position: relative;
   padding-left: 60px;
 }
 
-.level2 {
+/* Список активностей */
+.activity-list {
   font-size: 18px;
   font-style: italic;
   margin-top: 10px;
 }
 
-.level2 > li {
+.activity-list > li {
   background-color: rgb(153, 180, 102);
   margin-bottom: 10px;
   padding: 10px 0 10px 50px;
@@ -51,7 +53,8 @@ span {
   color: white;
 }
 
-.level1 > li > span {
+/* Заголовки фаз */
+.phase-list > li > span {
   font-size: 20px;
   font-weight: 700;
   background-color: rgb(199, 124, 106);
@@ -59,20 +62,22 @@ span {
   border-radius: 4px;
 }
 
-.level2 span {
+/* Активності */
+.activity-list span {
   background-color: rgb(218, 106, 32);
   border-radius: 4px;
 }
 
+/* Роздільник між фазами */
 .divider {
   height: 25px;
   background-color: rgb(255, 165, 0);
   margin: 0;
 }
 
-
-.prep::before,
-.rest::before {
+/* Іконки для фаз */
+.phase-preparation::before,
+.phase-leisure::before {
   content: "";
   position: absolute;
   left: 15px;
@@ -84,34 +89,35 @@ span {
   background-repeat: no-repeat;
 }
 
-.route {
+/* Іконки для активностей */
+.activity-route {
   background-image: url("img/route.svg");
 }
 
-.plane {
+.activity-flight {
   background-image: url("img/plane.svg");
 }
 
-.hotel {
+.activity-hotel {
   background-image: url("img/hotel.svg");
 }
 
-.car {
+.activity-car-rental {
   background-image: url("img/car.svg");
 }
 
-.bar {
+.activity-bar {
   background-image: url("img/bar.svg");
 }
 
-.casino {
+.activity-casino {
   background-image: url("img/casino.svg");
 }
 
-.museum {
+.activity-museum {
   background-image: url("img/museum.svg");
 }
 
-.festival {
+.activity-festival {
   background-image: url("img/festival.svg");
 }

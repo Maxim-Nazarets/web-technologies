@@ -1,0 +1,74 @@
+<html lang="uk">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Weather - Flex layout</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+<header class="header">
+<div class="location">
+<h1>New York, NY</h1>
+<div class="sub">Tuesday, April 15th<span class="dot">·</span>Overcast</div>
+</div>
+<div class="current-card">
+<div class="current-icon">
+<img src="icons/overcast.png" alt="overcast">
+</div>
+<div class="current-temp">58°<span class="f">F</span></div>
+<div class="current-meta">
+<div>Precipitation: 100%</div>
+<div>Humidity: 97%</div>
+<div>Wind: 4 mph SW</div>
+<div>Pollen Count: 36</div>
+</div>
+</div>
+</header>
+
+
+<section class="forecast" id="forecast"></section>
+</main>
+
+
+<script>
+
+const days = [
+{day: 'Today', icon: 'icons/rain-thunder.png', high: 68, low: 36, pollen: 36},
+{day: 'Wednesday', icon: 'icons/sun.png', high: 50, low: 39, pollen: 36},
+{day: 'Thursday', icon: 'icons/sun.png', high: 55, low: 39, pollen: 36},
+{day: 'Friday', icon: 'icons/partly-cloudy.png', high: 54, low: 43, pollen: 36},
+{day: 'Saturday', icon: 'icons/rain.png', high: 64, low: 46, pollen: 36},
+{day: 'Sunday', icon: 'icons/rain.png', high: 64, low: 50, pollen: 36},
+{day: 'Monday', icon: 'icons/partly-cloudy.png', high: 61, low: 50, pollen: 36}
+];
+
+
+
+
+const forecastEl = document.getElementById('forecast');
+
+
+function renderForecast(items){
+items.forEach(item => {
+const row = document.createElement('article');
+row.className = 'day-row';
+
+
+row.innerHTML = `
+<div class="day-name">${item.day}</div>
+<div class="day-icon"><img src="${item.icon}" alt="${item.day} icon"></div>
+<div class="day-temp"><div class="high">${item.high}°</div><div class="low">${item.low}°</div></div>
+<div class="day-pollen">Pollen ${item.pollen}</div>
+`;
+
+
+forecastEl.appendChild(row);
+});
+}
+
+
+renderForecast(days);
+</script>
+</body>
+</html>
